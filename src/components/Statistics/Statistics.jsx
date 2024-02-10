@@ -1,9 +1,26 @@
-// import { FaRegThumbsUp } from 'react-icons/fa';
-// import { MdPeople, MdOutlineProductionQuantityLimits } from 'react-icons/md';
-// import { GiTreeDoor } from 'react-icons/gi';
-// import { StatisticsItem } from '../StatisticsItem/StatisticsItem';
-// import style from './Statistics.module.css';
+import { StatisticsItem } from '..';
+import style from './Statistics.module.css';
+import { GrActions, GrAd, GrAmazon, GrAnchor } from "react-icons/gr";
 
-export const Statistics = () => {
-  return <h2>Statistics</h2>;
+const arrayIcon = [<GrActions/>, <GrAd/>, <GrAmazon/>, <GrAnchor/>];
+
+export const Statistics = ({ title, stats }) => {
+  return (
+    <>
+      {title && (
+        <h2 className={style.title}>
+          {title}
+        </h2>
+      )}
+
+      <ul className={style.list}>
+        {stats.map((stat, index) => (
+          <li className={style.item} key={stat.id}>
+            <StatisticsItem {...stat} icon={arrayIcon[index]}/>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
+
