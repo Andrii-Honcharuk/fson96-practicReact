@@ -1,6 +1,6 @@
 # Список Forbes
 
-Необхідно створити компонент `<ForbesList>`, за допомогою якого ми могли б
+Необхідно доповнити компонент `<ForbesList>`, за допомогою якого ми могли б
 відображати інформацію про актуальну інформацію портала **Forbes**. Інформація
 про актуальний рейтинг [forbes.json](./src/data/forbes.json).
 
@@ -8,23 +8,21 @@
 
 ## Опис компонента `<ForbesList>`
 
-Компонент повинен приймати один проп `list` - масив об'єктів друзів.
+Компонент повинен приймати один проп `list` - масив об'єктів.
 
 Компонент повинен створювати наступну структуру.
 
 ```jsx
-<LeaderBoard>
-  <BoardHeader>
-    <BoardTitle>
-      <TitleTop>Forbes</TitleTop>
-      <TitleBottom>Leader board</TitleBottom>
-    </BoardTitle>
-  </BoardHeader>
+<div className={style.board}>
+  <div className={style.header}>
+    <h2 className={style.title}>
+      <span className={style.titleTop}>Forbes</span>
+      <span className={style.titleBottom}>Leader board</span>
+    </h2>
+  </div>
 
-  <LeaderBoardProfiles>
-    {/* Довільна кіл-сть ForbesListItem */}
-  </LeaderBoardProfiles>
-</LeaderBoard>
+  <ul className={style.list}>{/* Довільна кіл-сть FriendListItem */}</ul>
+</div>
 ```
 
 ## Опис компонента `<ForbesListItem>`
@@ -42,17 +40,18 @@
 Компонент повинен бути наступної структури.
 
 ```jsx
-<ForbesItem>
-  <Avatar
+<li className={style.item}>
+  <img
+    className={style.avatar}
     src="https://randomuser.me/api/portraits/men/32.jpg"
     alt="Mark Zuckerberg"
   />
-  <Name>Mark Zuckerberg</Name>
-  <Capital>
-    35.7 <BiDollarCircle color={theme.colors.accent} size={22} />
+  <h3 className={style.title}>Mark Zuckerberg</h3>
+  <span className={style.capital}>
+    35.7 <BiDollarCircle color="#2196f3" size={22} />
     {/* Тут має бути необхідна іконка зміни статку */}
-  </Capital>
-</ForbesItem>
+  </span>
+</li>
 ```
 
 ## Приклад використання

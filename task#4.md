@@ -1,6 +1,6 @@
 # Історія транзакцій
 
-Необхідно створити компонент історії транзакцій в особистому кабінеті
+Необхідно доповнити компонент історії транзакцій в особистому кабінеті
 крипто-гаманця.
 
 [![Прев'ю компонента CryptoHistory](https://i.gyazo.com/c40db818fdf62f749f97ab24f1946928.png)](https://gyazo.com/c40db818fdf62f749f97ab24f1946928)
@@ -16,37 +16,37 @@
 
 ## Опис компонента `<CryptoHistory>`
 
-Необхідно створити компонент `<CryptoHistory>`, який приймає один проп `items` -
-масив об'єктів транзакцій з `transactions.json`. Компонент створює розмітку
-таблиці. Кожна транзакція - це рядок таблиці. У прикладі наведена структура двох
-транзакцій.
+Необхідно доповнити компонент `<CryptoHistory>`, який приймає один проп
+`items` - масив об'єктів транзакцій з `transactions.json`. Компонент створює
+розмітку таблиці. Кожна транзакція - це рядок таблиці. У прикладі наведена
+структура двох транзакцій.
 
 ```jsx
-<BaseTable>
-  <THead>
+<table className={style.table}>
+  <thead className={style.thead}>
     <tr>
-      <Th>№</Th>
-      <Th>PRICE</Th>
-      <Th>AMOUNT</Th>
-      <Th>DATE</Th>
+      <th className={style.th}>№</th>
+      <th className={style.th}>PRICE</th>
+      <th className={style.th}>AMOUNT</th>
+      <th className={style.th}>DATE</th>
     </tr>
-  </THead>
+  </thead>
 
   <tbody>
-    <Tr>
-      <Td>1</Td>
-      <Td>3190</Td>
-      <Td>0.24843</Td>
-      <Td>02/01/2022, 1:14 PM</Td>
-    </Tr>
-    <Tr>
-      <Td>2</Td>
-      <Td>3195</Td>
-      <Td>0.088</Td>
-      <Td>05/09/2022, 2:24 PM</Td>
-    </Tr>
+    <tr className={style.tr}>
+      <td className={style.td}>1</td>
+      <td className={style.td}>3190</td>
+      <td className={style.td}>0.24843</td>
+      <td className={style.td}>02/01/2022, 1:14 PM</td>
+    </tr>
+    <tr className={style.tr}>
+      <td className={style.td}>2</td>
+      <td className={style.td}>3195</td>
+      <td className={style.td}>0.088</td>
+      <td className={style.td}>05/09/2022, 2:24 PM</td>
+    </tr>
   </tbody>
-</BaseTable>
+</table>
 ```
 
 > Для форматування дати використовуйте метод
@@ -57,5 +57,5 @@
 ```js
 import transactions from 'data/transactions.json';
 
-<TransactionHistory items={transactions} />;
+<CryptoHistory items={transactions} />;
 ```

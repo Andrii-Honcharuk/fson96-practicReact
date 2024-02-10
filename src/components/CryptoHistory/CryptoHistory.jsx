@@ -1,5 +1,5 @@
-import { BaseTable, THead, Th, Tr, Td } from './CryptoHistory.styled';
+// const tableHeaders = ['№', 'price', 'amount', 'date'];
 
 export const CryptoHistory = () => {
-  return <div>CryptoHistory</div>;
+  return <h2>CryptoHistory</h2>;
 };

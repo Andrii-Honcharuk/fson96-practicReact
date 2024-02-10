@@ -1,6 +1,6 @@
 # Картка блогу
 
-Необхідно створити компонент `<BlogCard/>`, за допомогою якого ми могли б
+Необхідно доповнити компонент `<BlogCard/>`, за допомогою якого ми могли б
 відображати інформацію про користувача соціальної мережі. Дані про користувача
 лежать у файлі [article.json](./src/data/article.json).
 
@@ -21,31 +21,36 @@
 Компонент повинен створювати наступну структуру.
 
 ```jsx
-<Card>
-  <CardHeader>
-    <CardPoster
+<div className={styles.card}>
+  <div className={styles.cardHeader}>
+    <img
+      className={styles.cardPoster}
       src="https://source.unsplash.com/600x400/?computer"
       alt="card__image"
     />
-  </CardHeader>
-  <CardBody>
-    <Tag>Technology</Tag>
-    <CardTitle>What's new in 2022 Tech</CardTitle>
-    <CardText>
+  </div>
+  <div className={styles.cardBody}>
+    <span className={styles.tag}>Technology</span>
+    <h2 className={styles.cardTitle}>What's new in 2022 Tech</h2>
+    <p className={styles.cardText}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis
       molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!
-    </CardText>
-  </CardBody>
-  <CardFooter>
-    <UserBox>
-      <Avatar src="https://i.pravatar.cc/40?img=1" alt="Jane Doe" />
-      <UserInfo>
-        <UserName>Jane Doe</UserName>
-        <Date>2h ago</Date>
-      </UserInfo>
-    </UserBox>
-  </CardFooter>
-</Card>
+    </p>
+  </div>
+  <div className={styles.cardFooter}>
+    <div className={styles.userBox}>
+      <img
+        className={styles.avatar}
+        src="https://i.pravatar.cc/40?img=1"
+        alt="Jane Doe"
+      />
+      <div>
+        <h3 className={styles.userName}>Jane Doe</h3>
+        <small className={styles.date}>2h ago</small>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 > Для форматування дати використовуйте метод

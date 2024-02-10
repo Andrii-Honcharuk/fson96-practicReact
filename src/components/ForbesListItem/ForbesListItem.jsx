@@ -1,9 +1,6 @@
-import { BiDollarCircle } from 'react-icons/bi';
-import { FcBullish, FcBearish } from 'react-icons/fc';
-import { ForbesItem, Avatar, Name, Capital } from './ForbesListItem.styled';
-
-import { theme } from 'styles/theme';
+// import { BiDollarCircle } from 'react-icons/bi';
+// import { FcBullish, FcBearish } from 'react-icons/fc';
 
 export const ForbesListItem = () => {
-  return <div>ForbesItem</div>;
+  return <h3>ForbesListItem</h3>;
 };
