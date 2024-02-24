@@ -8,10 +8,14 @@ export const Todos = () => {
     setTodos(prevTodos => [...prevTodos, newToodo]);
   };
 
+  const handleDeleteTodo = (idToDelete) => {
+    setTodos( prevTodos => prevTodos.filter(todo => todo.id !== idToDelete))
+  }
+
   return (
     <>
       <Form onSubmit={handleSubmit} />
-      {todos.length > 0 && <TodoList todos={todos} />}
+      {todos.length > 0 && <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />}
       {todos.length === 0 && (
         <Text textAlign="center">There are no any todos ...</Text>
       )}
