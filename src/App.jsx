@@ -1,5 +1,5 @@
-import { Section, Container, Header, Text, TodoList } from "components";
-import { Form } from "components/Form/Form";
+import { Section, Container, Header, Text, TodoList, Filter } from 'components';
+import { Form } from 'components/Form/Form';
 
 export const App = () => {
   return (
@@ -9,6 +9,7 @@ export const App = () => {
         <Container>
           <Form />
           {/* <Text textAlign="center">Create your first todo😉</Text> */}
+          <Filter />
           <TodoList />
         </Container>
       </Section>
