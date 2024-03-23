@@ -1,3 +1,4 @@
+// SearchCountry.jsx
 import { Container, CountryList, SearchForm, Section } from 'components';
 import { useEffect, useState } from 'react';
 import { fetchByRegion } from 'service/countryApi';

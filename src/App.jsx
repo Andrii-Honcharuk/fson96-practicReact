@@ -1,3 +1,5 @@
+//App.jsx
+
 import { Country } from 'pages/Country';
 import { Home } from 'pages/Home';
 import { Route, Routes } from 'react-router-dom';

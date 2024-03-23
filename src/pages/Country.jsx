@@ -1,3 +1,5 @@
+//Country.jsx
+
 import { Container, CountryInfo, GoBackBtn, Section } from 'components';
 import { useParams } from 'react-router';
 import { fetchCountry } from '../service/countryApi';
@@ -21,7 +23,7 @@ export const Country = () => {
   return (
     <Section>
       <Container>
-        <GoBackBtn ref={linkToBack.current} />
+        <GoBackBtn link={linkToBack.current} />
         {countryInfo && (
           <CountryInfo
             flag={countryInfo.flag}
