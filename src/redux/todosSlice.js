@@ -20,6 +20,8 @@ const todosSlice = createSlice({
   },
 });
 
+export const selectTodos = (state) => state.items
+
 export const { addTodo } = todosSlice.actions;
 const reducer = todosSlice.reducer;
 export default reducer;
