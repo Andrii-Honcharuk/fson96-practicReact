@@ -1,4 +1,4 @@
-import { Section, Container, Header, Text, TodoList, Filter } from 'components';
+import { Section, Container, Header, TodoList, Filter } from 'components';
 import { Form } from 'components/Form/Form';
 
 export const App = () => {
